@@ -4,6 +4,8 @@
     --white-color: #ffffff;
     --grey-color: #F4F4FD;
     --iris-color: #4D5AE5;
+    --hover-focus-color: #404BBF;
+    --cornflower-color: #E7E9FC;
 }
 
 body {
@@ -17,11 +19,12 @@ body {
 }
 
 .header-logo {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     color: var(--primary-text-color);
     font-weight: 800;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 1.33;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
@@ -33,7 +36,7 @@ body {
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     text-decoration: none;
 }
@@ -41,17 +44,21 @@ body {
 .nav-link:hover,
 .nav-link:focus,
 .nav-link.current {
-    color: #404BBF;
+    color: var(--hover-focus-color);
 }
 
 .contact-link {
-    font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--second-text-color);
     text-decoration: none;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--hover-focus-color);
 }
 
 .hero {
@@ -61,20 +68,26 @@ body {
 .hero-title {
     font-weight: 700;
     font-size: 56px;
-    line-height: 60px;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     color: var(--white-color);
 }
 
 .hero-button {
+    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-    display: flex;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--white-color);
-    background: var(--iris-color);
+    background-color: var(--iris-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--hover-focus-color);
 }
 
 .visually-hidden {
@@ -93,15 +106,14 @@ body {
 .section-title {
     font-weight: 500;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
 }
 
 .section-text {
-    font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--second-text-color);
 }
@@ -109,7 +121,7 @@ body {
 .section-hero {
     font-weight: 700;
     font-size: 36px;
-    line-height: 40px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--primary-text-color);
@@ -123,7 +135,7 @@ body {
     font-family: 'Raleway';
     font-weight: 800;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 1.17;
     display: flex;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -132,11 +144,10 @@ body {
 }
 
 .footer-text {
-    font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #E7E9FC;
+    color: var(--cornflower-color);
 }
 
 .footer {
@@ -146,15 +157,20 @@ body {
 .list-button {
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.04em;
     color: var(--iris-color);
     background: var(--grey-color);
-    border: 1px solid #E7E9FC;
+    border: 1px solid var(--cornflower-color);
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.list-button:hover,
+.list-button:focus {
+    color: var(--white-color);
+    background-color: var(--hover-focus-color);
 }
 
 .list-link {
